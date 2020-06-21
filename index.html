@@ -401,6 +401,20 @@
 <h2 id="希尔伯特矩阵"><a href="#希尔伯特矩阵" class="headerlink" title="希尔伯特矩阵"></a>希尔伯特矩阵</h2><p>[1 ，  1/2，    1/3，……，         1/n]<br>|1/2， 1/3，    1/4，……，     1/(n+1)|<br>|1/3， 1/4，    1/5，……，     1/(n+2)|<br>              ……<br>[1/n， 1/(n+1)，1/(n+2)，……，1/(2n-1)]<br>其元素A（i,j）=1/(i+j-1)，i,j分别为其行标和列标。<br>hilb(n)来进行生成<br>format rat<br>H=hilb(4)</p>
 <h2 id="伴随矩阵"><a href="#伴随矩阵" class="headerlink" title="伴随矩阵"></a>伴随矩阵</h2><p>compan(p)<br>例如生成多项式x^3-2x^2-5x+6<br>p=[1, -2, -5, 6]<br>A=compan(p)</p>
 <h2 id="帕斯卡矩阵"><a href="#帕斯卡矩阵" class="headerlink" title="帕斯卡矩阵"></a>帕斯卡矩阵</h2><p>斜着的杨辉三角<br>Pascal矩阵的第一行元素和第一列元素都为1，其余位置处的元素是该元素的左边元素加上同列中行数小于其的其他元素。例如：a（i，j）=a（i，j－1）+a（i－1，j－1）+……+a（1，j－1）。<br>函数pascal(阶数)</p>
+<h1 id="矩阵变换"><a href="#矩阵变换" class="headerlink" title="矩阵变换"></a>矩阵变换</h1><h2 id="对角阵"><a href="#对角阵" class="headerlink" title="对角阵"></a>对角阵</h2><p>对角矩阵，数量矩阵，单位矩阵</p>
+<h3 id="提取矩阵的对角线元素"><a href="#提取矩阵的对角线元素" class="headerlink" title="提取矩阵的对角线元素"></a>提取矩阵的对角线元素</h3><p>diag(A): 提取矩阵A主对角线元素，产生一个列向量<br>diag(A,k): 提取矩阵A第k条对角线的元素，产生一个列向量<br>k值：以主对角线为0，往上平行为正，往下为负</p>
+<h3 id="构造对角矩阵"><a href="#构造对角矩阵" class="headerlink" title="构造对角矩阵"></a>构造对角矩阵</h3><p>diag(V):以向量V为主对角线元素，产生对角阵<br>diag(V,k):以向量V为第k条对角线元素，产生对角矩阵<br>左乘对角阵，则是将每一行乘以对角线元素<br>右乘对角阵，则是将每一列乘以对角线元素</p>
+<h2 id="三角阵"><a href="#三角阵" class="headerlink" title="三角阵"></a>三角阵</h2><p>上三角矩阵<br>triu(A):提取矩阵A的主对角线及以上的元素<br>triu(A,k):提取矩阵A的第k条对角线及以上的元素<br>下三角矩阵<br>tirl：用法与triu完全相同</p>
+<h2 id="矩阵的转置"><a href="#矩阵的转置" class="headerlink" title="矩阵的转置"></a>矩阵的转置</h2><p>转置运算符是小数点后面接单引号(.’)<br>共轭转置，运算符是单引号(‘),它在转置的基础上要取每一个数的复共轭</p>
+<h2 id="矩阵的旋转"><a href="#矩阵的旋转" class="headerlink" title="矩阵的旋转"></a>矩阵的旋转</h2><p>rot90(A,k):将矩阵A逆时针旋转90度的K倍，当k为1时可以省略</p>
+<h2 id="矩阵的翻转"><a href="#矩阵的翻转" class="headerlink" title="矩阵的翻转"></a>矩阵的翻转</h2><p>fliplr(A):对矩阵A左右翻转<br>flipud(A):对矩阵A上下翻转</p>
+<h2 id="矩阵求逆"><a href="#矩阵求逆" class="headerlink" title="矩阵求逆"></a>矩阵求逆</h2><p>inv(A): 求方阵A的逆<br>例子用求逆矩阵的方法解线性方程组<br>x+2y+3z=5<br>x+4y+9z=-2<br>x+8y+27z=6</p>
+<p>Ax=b → x = A^-1 b<br>A=[1 , 2, 3;1 ,4 ,9 ;1 ,8 , 27]<br>b=[5 ;-2;6]<br>x=inv(A)*b</p>
+<h1 id="矩阵求值"><a href="#矩阵求值" class="headerlink" title="矩阵求值"></a>矩阵求值</h1><h2 id="求方阵行列式的值"><a href="#求方阵行列式的值" class="headerlink" title="求方阵行列式的值"></a>求方阵行列式的值</h2><p>det(A):求方阵A所对应的行列式的值<br>易证：A的逆的行列式的值等于A的行列式的值分之一</p>
+<h2 id="矩阵的秩"><a href="#矩阵的秩" class="headerlink" title="矩阵的秩"></a>矩阵的秩</h2><p>rank(A):求方阵A的秩<br>列子：求3-20阶魔方阵的秩<br>for n = 3 : 20<br>   r(n) = rank(magic(n));<br>end<br>bar(r)<br>grid on<br>axis([2,21,0,20])<br>结果：<br>奇数阶魔方阵秩为n，即奇数阶魔方阵是满秩矩阵<br>一重偶数阶魔方阵秩为n/2+2(n是2的倍数，但非4的倍数)<br>双重偶数阶魔方阵秩均为3(阶数是4的倍数)</p>
+<h2 id="矩阵的迹"><a href="#矩阵的迹" class="headerlink" title="矩阵的迹"></a>矩阵的迹</h2><p>等于对角线元素之和，也等于矩阵的特征值之和<br>trace(A):矩阵的迹</p>
+<h2 id="向量和矩阵的范数"><a href="#向量和矩阵的范数" class="headerlink" title="向量和矩阵的范数"></a>向量和矩阵的范数</h2><p>矩阵或向量的范数用来度量矩阵或向量在某种意义下的长度</p>
+<h3 id="向量的3种范数"><a href="#向量的3种范数" class="headerlink" title="向量的3种范数"></a>向量的3种范数</h3><p><img src="1.PNG" alt=""></p>
 
           
         
