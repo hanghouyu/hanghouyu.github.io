@@ -302,6 +302,302 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://houyuhang.com/2020/07/03/python基础/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="侯宇航">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="侯宇航">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/07/03/python基础/" itemprop="url">python基础</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-03T15:02:43+08:00">
+                2020-07-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="温度实例"><a href="#温度实例" class="headerlink" title="温度实例"></a>温度实例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#TempConvert.py</span><br><span class="line">TemStr = input(&quot;请输入带有符号的温度值：&quot;)</span><br><span class="line">if TemStr[0] in [&apos;F&apos;,&apos;f&apos;]:</span><br><span class="line">    C = (eval(TemStr[1:-1]) -32)/1.8</span><br><span class="line">    print(&quot;转换后的温度是C&#123;:.2f&#125;&quot;.format(C))</span><br><span class="line">elif TemStr[0] in [&apos;C&apos;,&apos;c&apos;]:</span><br><span class="line">    F = 1.8*eval(TemStr[1:-1]) + 32</span><br><span class="line">    print(&quot;转换后的温度是F&#123;:.2f&#125;&quot;.format(F))</span><br><span class="line">else:</span><br><span class="line">    print(&quot;输入格式错误&quot;)</span><br></pre></td></tr></table></figure>
+<h2 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h2><p>字符串序号：正向递增，反向递减<br>0   1   2   3   4<br>请  输  入  温  度<br>-5  -4 -3  -2  -1</p>
+<h2 id="turtle蟒蛇绘制"><a href="#turtle蟒蛇绘制" class="headerlink" title="turtle蟒蛇绘制"></a>turtle蟒蛇绘制</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import turtle</span><br><span class="line">turtle.setup(650,350,200,200) #设置窗口位置和宽高</span><br><span class="line">turtle.penup() #画笔工具抬起，移动是不会在画布上面显示</span><br><span class="line">turtle.fd(-250) #海龟向前方行进距离</span><br><span class="line">turtle.pendown() #画笔放下</span><br><span class="line">turtle.pensize(25) #画笔粗细宽度</span><br><span class="line">turtle.pencolor(&quot;red&quot;) #画笔颜色</span><br><span class="line">turtle.seth(-40) #海龟顺时针旋转40度</span><br><span class="line">for i in range(4): #循环4次画圆</span><br><span class="line">    turtle.circle(40,80)</span><br><span class="line">    turtle.circle(-40,80)</span><br><span class="line">turtle.circle(40,80/2)</span><br><span class="line">turtle.fd(40)</span><br><span class="line">turtle.circle(16,180)</span><br><span class="line">turtle.fd(40 * 2/3)</span><br><span class="line">turtle.done()</span><br></pre></td></tr></table></figure>
+<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><p>for &lt;变量&gt; in range(参数)<br>range(N)从0到N-1的数<br>range(M,N) 产生M 到N-1的整数序列</p>
+<h2 id="库引用"><a href="#库引用" class="headerlink" title="库引用"></a>库引用</h2><p>import<br>from … import …<br>import … as …</p>
+<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><p>数字类型：整型 浮点型 复数<br>其中浮点型要注意不确定尾数和C一样</p>
+<h2 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h2><p>四则运算：  + - * /<br>//： 整除<br>%： 求余<br>x**y： x的y次方<br>abs(x)： 绝对值<br>divmod(x,y): 商余，同时输出商和余<br>max(x1,x2,x3,x4…)最大值<br>min(x1,x2,x3,x4…)最小值<br>int(x)取整<br>float(x)变浮点数<br>complex(x) 变复数</p>
+<h2 id="天天向上的力量"><a href="#天天向上的力量" class="headerlink" title="天天向上的力量"></a>天天向上的力量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#DayDayUP.py</span><br><span class="line">def dayUp(df):</span><br><span class="line">    dayup = 1.0</span><br><span class="line">    for i in range(365):</span><br><span class="line">        if i % 7 in [0,6]:</span><br><span class="line">            dayup = dayup*(1-0.01)</span><br><span class="line">        else:</span><br><span class="line">            dayup = dayup*(1+df)</span><br><span class="line">    return dayup</span><br><span class="line">dayfactor = 0.01</span><br><span class="line">while dayUp(dayfactor)&lt;37.78:</span><br><span class="line">    dayfactor += 0.001</span><br><span class="line">print(&quot;每天需要多努力:&#123;:.3f&#125;&quot;.format(dayfactor))</span><br></pre></td></tr></table></figure>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>如果字符串中出现了引号，那么外面就用与其不同的引号括起来<br>如果里面单引号外面就用双引号，反之亦然<br>转义符\</p>
+<h3 id="操作符-1"><a href="#操作符-1" class="headerlink" title="操作符"></a>操作符</h3><p>x+y:拼接  n*x或x*n复制n次字符串  x in s： 判断x是不是s的子串</p>
+<h3 id="处理函数"><a href="#处理函数" class="headerlink" title="处理函数"></a>处理函数</h3><p>len(x) 返回字符串x的长度<br>str(x) 将任意类型的数据转换成字符串类型<br>hex(x)和oct(x)将整数x转换为16进制和8进制<br>chr(U),ord(x)Python使用Unicode编码使用<br>str,lower(),str.upper()大小写转换<br>str.split(sep=none),返回列表，由sep决定分隔<br>str.count(sub)返回sub在str中出现的次数<br>str.replace(old,new),例如”python”.replace(“n”,”n123.io”)输出为”python123.io”<br>str.center(width[,fillchar]),居中和填充，”python”.center(20,”=”)结果为’=======python=======’<br>str.strip(chars)将str中的chars字符全部去掉<br>str.join(iter)在iter变量除最后元素外每个元素后增加一个,例如str”,”.join(“12345”)输出为”1,2,3,4,5”</p>
+<h3 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a>格式化</h3><p>print({槽}).format(变量，变量，)<br>|:   |填充    |对齐|宽度|，|.精度|类型|<br>|引导|单个字符|&lt;&gt;左右对齐^居中|千分位||整数浮点数|</p>
+<h2 id="time库"><a href="#time库" class="headerlink" title="time库"></a>time库</h2><p>import time 引入<br>time.time()计算机内部时间<br>time.ctime()可读方式<br>time.gmtime()</p>
+<h3 id="时间格式化"><a href="#时间格式化" class="headerlink" title="时间格式化"></a>时间格式化</h3><p>strftime(tpl,ts) tpl模板，ts计算机内部时间变量</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://houyuhang.com/2020/06/21/程序流程控制/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="侯宇航">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="侯宇航">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/21/程序流程控制/" itemprop="url">程序流程控制</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-21T16:00:00+08:00">
+                2020-06-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/matlab/" itemprop="url" rel="index">
+                    <span itemprop="name">matlab</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://houyuhang.com/2020/06/17/matlab-矩阵应用/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1061,7 +1357,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1072,7 +1368,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
