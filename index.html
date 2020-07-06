@@ -79,16 +79,16 @@
 
 
 
-<meta name="description" content="一个小菜鸟想变成大菜鸟">
+<meta name="description" content="一个小菜鸡想变成大菜鸡">
 <meta property="og:type" content="website">
 <meta property="og:title" content="侯宇航">
 <meta property="og:url" content="http://houyuhang.com/index.html">
 <meta property="og:site_name" content="侯宇航">
-<meta property="og:description" content="一个小菜鸟想变成大菜鸟">
+<meta property="og:description" content="一个小菜鸡想变成大菜鸡">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="侯宇航">
-<meta name="twitter:description" content="一个小菜鸟想变成大菜鸟">
+<meta name="twitter:description" content="一个小菜鸡想变成大菜鸡">
 
 
 
@@ -288,6 +288,156 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://houyuhang.com/2020/07/06/Abaqus基础/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="侯宇航">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="侯宇航">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/07/06/Abaqus基础/" itemprop="url">Abaqus基础</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-06T09:33:43+08:00">
+                2020-07-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Abaqus/" itemprop="url" rel="index">
+                    <span itemprop="name">Abaqus</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="有限元方法"><a href="#有限元方法" class="headerlink" title="有限元方法"></a>有限元方法</h1><p>一个将连续体集散化为若干个有限大小的单元体的集合，以求解连续体力学的数值方法</p>
+<h1 id="操作基础"><a href="#操作基础" class="headerlink" title="操作基础"></a>操作基础</h1><h2 id="abaqus用户界面"><a href="#abaqus用户界面" class="headerlink" title="abaqus用户界面"></a>abaqus用户界面</h2><p>复制模型<br>菜单栏<br>旋转部件</p>
+<h2 id="鼠标操作"><a href="#鼠标操作" class="headerlink" title="鼠标操作"></a>鼠标操作</h2><p>平移 ：Ctrl+Alt+MB2<br>旋转：Ctrl + Alt + MB1<br>缩放：Ctry + Alt + MB3</p>
+<h2 id="软件单位"><a href="#软件单位" class="headerlink" title="软件单位"></a>软件单位</h2><p>以SI（m)为单位<br>长度：M<br>力：N<br>质量：千克<br>时间：秒<br>压强：pa<br>能量：焦<br>密度：kg/m<sup>2</sup><br>加速度：m/s<sup>2</sup></p>
+<h1 id="建模模块"><a href="#建模模块" class="headerlink" title="建模模块"></a>建模模块</h1><h2 id="创建部件"><a href="#创建部件" class="headerlink" title="创建部件"></a>创建部件</h2><h3 id="部件的种类"><a href="#部件的种类" class="headerlink" title="部件的种类"></a>部件的种类</h3><h4 id="3D-：三维立体模型，默认选项"><a href="#3D-：三维立体模型，默认选项" class="headerlink" title="3D ：三维立体模型，默认选项"></a>3D ：三维立体模型，默认选项</h4><p>可变形体：适用于绝大部分的模拟对象<br>离散刚体：该选项通常用于接触分析中，类似于可变形体，可以模拟任何形状的物体<br>解析刚体：该选项仅用于建立壳和曲线，不能模拟任何形状的物体，当模拟较为简单的刚体时使用，为接触分析提供刚性表面<br>欧拉体：用得比较少，不做过多赘述，用在流体分析</p>
+<h4 id="2D-二维平面模型"><a href="#2D-二维平面模型" class="headerlink" title="2D: 二维平面模型"></a>2D: 二维平面模型</h4><p>三维可以解析为二维平面问题，不需要进行三维建模，会大大减少计算时间，代表实体。<br>可变形<br>离散刚体<br>解析刚体</p>
+<h4 id="Axisymmetric：轴对称图形"><a href="#Axisymmetric：轴对称图形" class="headerlink" title="Axisymmetric：轴对称图形"></a>Axisymmetric：轴对称图形</h4><p>可变形<br>离散刚性<br>解析刚性</p>
+<h3 id="草图应用"><a href="#草图应用" class="headerlink" title="草图应用"></a>草图应用</h3><p>CAD基础命令，画图，延长，裁剪等等<br>改尺寸，数值<br>添加草图，保存草图，易复用<br>aotocad也可以调用进来<br>实例见example1<br>拉伸的时候可以一边旋转一边拉伸</p>
+<h3 id="旋转扫略"><a href="#旋转扫略" class="headerlink" title="旋转扫略"></a>旋转扫略</h3><p>旋转绕轴旋转<br>扫略按路径扫略<br>拖拽就是拔模，一边扫一边放大或缩小类似一个台面<br>放样可以在多个截面进行扫略，少用</p>
+<h3 id="创建部件的基本原则"><a href="#创建部件的基本原则" class="headerlink" title="创建部件的基本原则"></a>创建部件的基本原则</h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1599,7 +1749,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">侯宇航</p>
-              <p class="site-description motion-element" itemprop="description">一个小菜鸟想变成大菜鸟</p>
+              <p class="site-description motion-element" itemprop="description">一个小菜鸡想变成大菜鸡</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -1609,7 +1759,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1620,7 +1770,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1631,7 +1781,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
