@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="VSCodeCtry + shift + P：选择解析Python版本 pyenvpyenv install –list # 列出可安装版本pyenv install  # 安装对应版本pyenv install -v  # 安装对应版本，若发生错误，可以显示详细的错误信息pyenv versions # 显示当前使用的python版本pyenv which python # 显示当前python">
+<meta name="description" content="find [PATH] [option] [action] 与时间有关的参数：-mtime n : n为数字，意思为在n天之前的“一天内”被更改过的文件；-mtime +n : 列出在n天之前（不含n天本身）被更改过的文件名；-mtime -n : 列出在n天之内（含n天本身）被更改过的文件名；-newer file : 列出比file还要新的文件名 例如：find /root -mtime 0">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python管理命令">
-<meta property="og:url" content="http://houyuhang.com/2020/07/05/Python管理命令/index.html">
+<meta property="og:title" content="Linux命令">
+<meta property="og:url" content="http://houyuhang.com/2020/11/29/Linux命令/index.html">
 <meta property="og:site_name" content="侯宇航">
-<meta property="og:description" content="VSCodeCtry + shift + P：选择解析Python版本 pyenvpyenv install –list # 列出可安装版本pyenv install  # 安装对应版本pyenv install -v  # 安装对应版本，若发生错误，可以显示详细的错误信息pyenv versions # 显示当前使用的python版本pyenv which python # 显示当前python">
+<meta property="og:description" content="find [PATH] [option] [action] 与时间有关的参数：-mtime n : n为数字，意思为在n天之前的“一天内”被更改过的文件；-mtime +n : 列出在n天之前（不含n天本身）被更改过的文件名；-mtime -n : 列出在n天之内（含n天本身）被更改过的文件名；-newer file : 列出比file还要新的文件名 例如：find /root -mtime 0">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-07-05T12:24:03.681Z">
+<meta property="og:updated_time" content="2020-11-29T09:14:20.089Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python管理命令">
-<meta name="twitter:description" content="VSCodeCtry + shift + P：选择解析Python版本 pyenvpyenv install –list # 列出可安装版本pyenv install  # 安装对应版本pyenv install -v  # 安装对应版本，若发生错误，可以显示详细的错误信息pyenv versions # 显示当前使用的python版本pyenv which python # 显示当前python">
+<meta name="twitter:title" content="Linux命令">
+<meta name="twitter:description" content="find [PATH] [option] [action] 与时间有关的参数：-mtime n : n为数字，意思为在n天之前的“一天内”被更改过的文件；-mtime +n : 列出在n天之前（不含n天本身）被更改过的文件名；-mtime -n : 列出在n天之内（含n天本身）被更改过的文件名；-newer file : 列出比file还要新的文件名 例如：find /root -mtime 0">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://houyuhang.com/2020/07/05/Python管理命令/">
+  <link rel="canonical" href="http://houyuhang.com/2020/11/29/Linux命令/">
 
 
 
 
 
-  <title>Python管理命令 | 侯宇航</title>
+  <title>Linux命令 | 侯宇航</title>
   
 
 
@@ -302,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://houyuhang.com/2020/07/05/Python管理命令/">
+    <link itemprop="mainEntityOfPage" href="http://houyuhang.com/2020/11/29/Linux命令/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="侯宇航">
@@ -319,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python管理命令</h1>
+          <h1 class="post-title" itemprop="name headline">Linux命令</h1>
         
 
         <div class="post-meta">
@@ -331,8 +331,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-05T20:11:01+08:00">
-                2020-07-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-11-29T17:06:50+08:00">
+                2020-11-29
               </time>
             
 
@@ -354,8 +354,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -391,8 +391,20 @@
       
 
       
-        <h1 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h1><p>Ctry + shift + P：选择解析Python版本</p>
-<h1 id="pyenv"><a href="#pyenv" class="headerlink" title="pyenv"></a>pyenv</h1><p>pyenv install –list # 列出可安装版本<br>pyenv install <version> # 安装对应版本<br>pyenv install -v <version> # 安装对应版本，若发生错误，可以显示详细的错误信息<br>pyenv versions # 显示当前使用的python版本<br>pyenv which python # 显示当前python安装路径<br>pyenv global <version> # 设置默认Python版本<br>pyenv local <version> # 当前路径创建一个.python-version, 以后进入这个目录自动切换为该版本<br>pyenv shell <version> # 当前shell的session中启用某版本，优先级高于global 及 local</version></version></version></version></version></p>
+        <p>find [PATH] [option] [action]</p>
+<h1 id="与时间有关的参数："><a href="#与时间有关的参数：" class="headerlink" title="与时间有关的参数："></a>与时间有关的参数：</h1><p>-mtime n : n为数字，意思为在n天之前的“一天内”被更改过的文件；<br>-mtime +n : 列出在n天之前（不含n天本身）被更改过的文件名；<br>-mtime -n : 列出在n天之内（含n天本身）被更改过的文件名；<br>-newer file : 列出比file还要新的文件名</p>
+<h2 id="例如："><a href="#例如：" class="headerlink" title="例如："></a>例如：</h2><p>find /root -mtime 0 # 在当前目录下查找今天之内有改动的文件</p>
+<h1 id="与用户或用户组名有关的参数："><a href="#与用户或用户组名有关的参数：" class="headerlink" title="与用户或用户组名有关的参数："></a>与用户或用户组名有关的参数：</h1><p>-user name : 列出文件所有者为name的文件<br>-group name : 列出文件所属用户组为name的文件<br>-uid n : 列出文件所有者为用户ID为n的文件<br>-gid n : 列出文件所属用户组为用户组ID为n的文件</p>
+<h2 id="例如：-1"><a href="#例如：-1" class="headerlink" title="例如："></a>例如：</h2><p>find /home/hadoop -user hadoop # 在目录/home/hadoop中找出所有者为hadoop的文件</p>
+<h1 id="与文件权限及名称有关的参数："><a href="#与文件权限及名称有关的参数：" class="headerlink" title="与文件权限及名称有关的参数："></a>与文件权限及名称有关的参数：</h1><p>-name filename ：找出文件名为filename的文件<br>-size [+-]SIZE ：找出比SIZE还要大（+）或小（-）的文件<br>-tpye TYPE ：查找文件的类型为TYPE的文件，TYPE的值主要有：一般文件（f)、设备文件（b、c）、<br>             目录（d）、连接文件（l）、socket（s）、FIFO管道文件（p）；<br>-perm mode ：查找文件权限刚好等于mode的文件，mode用数字表示，如0755；<br>-perm -mode ：查找文件权限必须要全部包括mode权限的文件，mode用数字表示<br>-perm +mode ：查找文件权限包含任一mode的权限的文件，mode用数字表示</p>
+<h1 id="ls命令例如："><a href="#ls命令例如：" class="headerlink" title="ls命令例如："></a>ls命令例如：</h1><p>find / -name passwd # 查找文件名为passwd的文件<br>find . -perm 0755 # 查找当前目录中文件权限的0755的文件<br>find . -size +12k # 查找当前目录中大于12KB的文件，注意c表示byte<br>-a ：全部的档案，连同隐藏档( 开头为 . 的档案) 一起列出来～<br>-A ：全部的档案，连同隐藏档，但不包括 . 与 .. 这两个目录，一起列出来～<br>-d ：仅列出目录本身，而不是列出目录内的档案数据<br>-f ：直接列出结果，而不进行排序 (ls 预设会以档名排序！)<br>-F ：根据档案、目录等信息，给予附加数据结构，例如：<br>*：代表可执行档； /：代表目录； =：代表 socket 档案； |：代表 FIFO 档案；<br>-h ：将档案容量以人类较易读的方式(例如 GB, KB 等等)列出来；<br>-i ：列出 inode 位置，而非列出档案属性；<br>-l ：长数据串行出，包含档案的属性等等数据；<br>-n ：列出 UID 与 GID 而非使用者与群组的名称 (UID与GID会在账号管理提到！)<br>-r ：将排序结果反向输出，例如：原本档名由小到大，反向则为由大到小；<br>-R ：连同子目录内容一起列出来；<br>-S ：以档案容量大小排序！<br>-t ：依时间排序<br>–color=never ：不要依据档案特性给予颜色显示；<br>–color=always ：显示颜色<br>–color=auto ：让系统自行依据设定来判断是否给予颜色<br>–full-time ：以完整时间模式 (包含年、月、日、时、分) 输出<br>–time={atime,ctime} ：输出 access 时间或 改变权限属性时间 (ctime)<br>而非内容变更时间 (modification time)     例如：ls [-aAdfFhilRS] 目录名称 ls [–color={none,auto,always}] 目录名称 ls [–full-time] 目录名称</p>
+<h1 id="cd命令"><a href="#cd命令" class="headerlink" title="cd命令"></a>cd命令</h1><p>cd /root/Docements # 切换到目录/root/Docements<br>cd ./path          # 切换到当前目录下的path目录中，“.”表示当前目录<br>cd ../path         # 切换到上层目录中的path目录中，“..”表示上一层目录</p>
+<h1 id="cp-命令，作用复制，参数如下："><a href="#cp-命令，作用复制，参数如下：" class="headerlink" title="cp 命令，作用复制，参数如下："></a>cp 命令，作用复制，参数如下：</h1><p>-a ：将文件的特性一起复制<br>-p ：连同文件的属性一起复制，而非使用默认方式，与-a相似，常用于备份<br>-i ：若目标文件已经存在时，在覆盖时会先询问操作的进行<br>-r ：递归持续复制，用于目录的复制行为<br>-u ：目标文件与源文件有差异时才会复制</p>
+<h1 id="rm命令作用为删除，参数："><a href="#rm命令作用为删除，参数：" class="headerlink" title="rm命令作用为删除，参数："></a>rm命令作用为删除，参数：</h1><p>-f ：就是force的意思，忽略不存在的文件，不会出现警告消息<br>-i ：互动模式，在删除前会询问用户是否操作<br>-r ：递归删除，最常用于目录删除，它是一个非常危险的参数</p>
+<h1 id="mv命令作用为移动文件："><a href="#mv命令作用为移动文件：" class="headerlink" title="mv命令作用为移动文件："></a>mv命令作用为移动文件：</h1><p>-f ：force强制的意思，如果目标文件已经存在，不会询问而直接覆盖<br>-i ：若目标文件已经存在，就会询问是否覆盖<br>-u ：若目标文件已经存在，且比目标文件新，才会更新</p>
+<h1 id="pwd命令，作用为查看”当前工作目录“的完整路径"><a href="#pwd命令，作用为查看”当前工作目录“的完整路径" class="headerlink" title="pwd命令，作用为查看”当前工作目录“的完整路径"></a>pwd命令，作用为查看”当前工作目录“的完整路径</h1><h1 id="mkdir命令创建目录"><a href="#mkdir命令创建目录" class="headerlink" title="mkdir命令创建目录"></a>mkdir命令创建目录</h1><p> mkdir [选项]… 目录…<br> -m, –mode=模式，设定权限&lt;模式&gt; (类似 chmod)，而不是 rwxrwxrwx 减 umask<br> -p, –parents  可以是一个路径名称。此时若路径中的某些目录尚不存在,加上此选项后,系统将自动建立好那些尚不存在的目录,即一次可以建立多个目录;<br> -v, –verbose  每次创建新目录都显示信息</p>
+<h1 id="rmdir-命令删除目录："><a href="#rmdir-命令删除目录：" class="headerlink" title="rmdir 命令删除目录："></a>rmdir 命令删除目录：</h1><p> rmdir [选项]… 目录…<br>-p 递归删除目录dirname，当子目录删除后其父目录为空时，也一同被删除。如果整个路径被删除或者由于某种原因保留部分路径，则系统在标准输出上显示相应的信息。<br>-v –verbose  显示指令执行过程 </p>
+<h1 id="chmod-R-XXX-文件或目录"><a href="#chmod-R-XXX-文件或目录" class="headerlink" title="chmod [-R] XXX 文件或目录"></a>chmod [-R] XXX 文件或目录</h1><p>-R：进行递归的持续更改，即连同子目录下的所有文件都会更改<br>XXX为权限参数例如777 744等等</p>
 
       
     </div>
@@ -441,8 +453,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/07/03/python基础/" rel="next" title="python基础">
-                <i class="fa fa-chevron-left"></i> python基础
+              <a href="/2020/11/03/钢结构/" rel="next" title="钢结构">
+                <i class="fa fa-chevron-left"></i> 钢结构
               </a>
             
           </div>
@@ -450,10 +462,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/07/06/Abaqus基础/" rel="prev" title="Abaqus基础">
-                Abaqus基础 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -621,7 +629,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#VSCode"><span class="nav-number">1.</span> <span class="nav-text">VSCode</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pyenv"><span class="nav-number">2.</span> <span class="nav-text">pyenv</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#与时间有关的参数："><span class="nav-number">1.</span> <span class="nav-text">与时间有关的参数：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#例如："><span class="nav-number">1.1.</span> <span class="nav-text">例如：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#与用户或用户组名有关的参数："><span class="nav-number">2.</span> <span class="nav-text">与用户或用户组名有关的参数：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#例如：-1"><span class="nav-number">2.1.</span> <span class="nav-text">例如：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#与文件权限及名称有关的参数："><span class="nav-number">3.</span> <span class="nav-text">与文件权限及名称有关的参数：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ls命令例如："><span class="nav-number">4.</span> <span class="nav-text">ls命令例如：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#cd命令"><span class="nav-number">5.</span> <span class="nav-text">cd命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#cp-命令，作用复制，参数如下："><span class="nav-number">6.</span> <span class="nav-text">cp 命令，作用复制，参数如下：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#rm命令作用为删除，参数："><span class="nav-number">7.</span> <span class="nav-text">rm命令作用为删除，参数：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mv命令作用为移动文件："><span class="nav-number">8.</span> <span class="nav-text">mv命令作用为移动文件：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pwd命令，作用为查看”当前工作目录“的完整路径"><span class="nav-number">9.</span> <span class="nav-text">pwd命令，作用为查看”当前工作目录“的完整路径</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mkdir命令创建目录"><span class="nav-number">10.</span> <span class="nav-text">mkdir命令创建目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#rmdir-命令删除目录："><span class="nav-number">11.</span> <span class="nav-text">rmdir 命令删除目录：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chmod-R-XXX-文件或目录"><span class="nav-number">12.</span> <span class="nav-text">chmod [-R] XXX 文件或目录</span></a></li></ol></div>
             
 
           </div>
